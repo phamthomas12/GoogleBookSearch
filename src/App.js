@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default {
+    getBook: function(query) {
+        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+    },
 
-export default App;
+    saveBook: function(bookData) {
+        return axios.post("/api/books", bookData);
+       
+    },
+
+    getSavedBooks: function() {
+        return axios.get("/api/books");
+        
+    },
+
+    deleteBook: function(id) {
+        return axios.delete("/api/books/" + id);
+    
+    }
+};
