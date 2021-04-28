@@ -1,0 +1,17 @@
+.nav-tabs {
+    margin-top: 10px;
+    border-bottom: none !important;
+    
+}
+
+.nav-link,
+.nav-link.active {
+    border-color: transparent !important;
+    color: blue !important;
+}
+
+h1 {
+    font-size: 28px !important;
+    line-height: 1.5 !important;
+    color: black;
+}
