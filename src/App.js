@@ -1,22 +1,20 @@
-import axios from "axios";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import Saved from "./pages/Saved";
+import Home from "./pages/Home";
 
-export default {
-    getBook: function(query) {
-        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-    },
 
-    saveBook: function(bookData) {
-        return axios.post("/api/books", bookData);
-       
-    },
+function App() {
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Route exact path={["/", "/search"]} component={Home} />
+        <Route path="/saved" component={Saved} />
+      </div>
+    </Router>
+  )
+}
 
-    getSavedBooks: function() {
-        return axios.get("/api/books");
-        
-    },
-
-    deleteBook: function(id) {
-        return axios.delete("/api/books/" + id);
-    
-    }
-};
+export default App;
