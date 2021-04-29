@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect(process.env.MONGODB_URI ||   "mongodb://localhost/googlebooks" );
+mongoose.connect(process.env.MONGODB_URI ||   "mongodb://localhost/googlebook" );
 
 let bookSeed = [
     {
