@@ -1,8 +1,12 @@
 ![License Badge](https://img.shields.io/badge/license-MIT-green.svg)
 # GoogleBookSearch
 
+<strong>HomePage:</strong>
 <img src="./Demo.PNG"/>
+
+<strong>SavedBooks:</strong>
 <img src="./Demo2.PNG"/>
+
 ## Table of Contents
 [Description](#Description) <br>
 [Technologies](#Technologies) <br>
