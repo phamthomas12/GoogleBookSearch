@@ -17,8 +17,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
-
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/googlebook',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 // Use apiRoutes
 app.use(apiRoutes);

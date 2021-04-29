@@ -11,7 +11,7 @@ function Nav() {
         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
                     <h1>Google Books</h1>
                 </Link>
-            {/* <h1>Google Books</h1> */}
+
         <ul className="nav nav-tabs">
             <li className="nav-item">
                 <Link to="/search" className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}>
